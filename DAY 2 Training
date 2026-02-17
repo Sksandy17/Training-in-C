@@ -1,0 +1,186 @@
+DAY 2
+1.USING ARITHMETIC OPERATOR TO SWAPPING TWO NUMBERS WITHOUT USING THIRD VARIABLE
+METHOD.1 
+// C Code to swap two numbers using arithmetic operators
+
+#include <stdio.h>
+int main() {
+    int a = 2, b = 3;
+    printf("a = %d b = %d\n", a, b);   
+  
+    a = a + b;
+    b = a - b;
+    a = a - b;
+  
+    printf("a = %d b = %d\n", a, b);
+    return 0;
+}
+METHOD.2
+ // C Code to swap two numbers using bitwise XOR
+
+#include <stdio.h>
+int main() {
+    int a = 2, b = 3;
+    printf("a = %d b = %d\n", a, b);   
+  
+    a = a ^ b;
+    b = a ^ b;
+    a = a ^ b;
+  
+    printf("a = %d b = %d\n", a, b);
+    return 0;
+}
+METHOD.3
+//C Code to swap two numbers using multiply and division
+#include <stdio.h>
+
+int main() {
+    int a = 10, b = 20;
+
+    a = a * b;
+    b = a / b;
+    a = a / b;
+
+    printf("a = %d, b = %d", a, b);
+    return 0;
+}
+2.//TO CHECK ODD OR EVEN WITHOUT USING ARITHMETIC OPERATIONS:
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    if (n & 1)
+        printf("Odd");
+    else
+        printf("Even");
+
+    return 0;
+}
+//COUNT ALL THE FACTORS
+//Without using square root in time complexity
+//Only for sqrt
+#include<stdio.h>
+int main()
+{
+    int n, count = 0;
+    scanf("%d", &n);
+    for(int i = 1; i*i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            if(n / i == i)
+            {
+                count++;
+            }
+            else
+            {
+                count += 2;
+            }
+        }
+    }
+    printf("%d", count);
+    return 0;
+}
+//Using squareroot in time complexity
+//Only for non sqrt
+#include<math.h>
+#include<stdio.h>
+int main()
+{
+    int n, count = 0;
+    scanf("%d", &n);
+    for(int i = 1; i <= sqrt(n); i++)
+    {
+        if(n % i == 0)
+        {
+            count += 2;
+        }
+    }
+    printf("%d", count);
+    return 0;
+}
+//Normal way
+#include<stdio.h>
+int main()
+{
+    int n, count = 0;
+    scanf("%d", &n);
+    for(int i = 1; i <= n/2; i++)
+    {
+        if(n % i == 0)
+        {
+            count++;
+        }
+    }
+    printf("%d", count);
+    return 0;
+}
+//Normal way a number is prime or not
+//METHOD 1
+#include<stdio.h>
+int main()
+{
+    int n, count = 0;
+    scanf("%d", &n);
+    for(int i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            count++;
+        }
+    }
+    if(count == 2)
+    {
+       printf("Prime");
+    }
+    else
+    {
+        printf("Not a Prime");
+    }
+
+    return 0;
+}
+//METHOD 2
+#include<stdio.h>
+int main()
+{
+    int n, count = 0;
+    scanf("%d", &n);
+    for(int i = 1; i <= n/2; i++)
+    {
+        if(n % i == 0)
+        {
+            count++;
+        }
+    }
+    if(count == 2)
+    {
+       printf("Prime");
+    }
+    else
+    {
+        printf("Not a Prime");
+    }
+    return 0;
+}
+//METHOD 3 EFFICIENT PROGRAM
+#include<stdio.h>
+int main()
+{
+    int n, count = 0;
+    scanf("%d", &n);
+    for(int i = 1; i*i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            printf("Not a Prime");
+        }
+    }
+    printf("Prime");
+    return 0;
+}
+
+
+
