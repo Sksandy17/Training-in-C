@@ -1,0 +1,170 @@
+DAY 4.......
+HACKERRANK SERIES...........
+
+//1.  Manual Power Calculator
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int base, exponent;
+    int result = 1;
+    scanf("%d%d", &base,&exponent);
+    for(int i = 0; i < exponent; i++)
+    {
+        result *= base;
+    }
+    printf("%d", result);
+    return 0;
+}
+
+//2.  Fibonacci Number 43(LeetCode)
+int fib(int n){
+    if(n==0 || n==1)
+    {
+        return n;
+    }
+    int a = 0, b = 1, c;
+
+//3.  Tribonacci Number 3(LeetCode)
+int tribonacci(int n){
+    if(n==0 || n==1)
+    {
+        return n;
+    }
+    int a = 0, b = 1, c = 1, d;
+
+//4.  NO OF COMMON FACTORS 1(LeetCode)
+int commonFactors(int a, int b) {
+    int count = 0;
+    for(int i = 1; i<=a && i <= b; i++)
+    {
+        if(a % i == 0 && b % i == 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+//5.  THREE DIVISORS 3(LeetCode)
+bool isThree(int n) {
+    int count=0;
+    for(int i = 1; i <= n; i++)
+    {
+        if(n % i == 0)
+        {
+            count++;
+        }
+    }
+    if(count==3)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+//6.  COUNT ME 5(geeksforgeeks)
+int countDigits(int n) {
+    int count=0;
+    while(n>0)
+    {
+        count++;
+        n=n /= 10;
+    }
+    return count;
+}
+
+//7.  Maximum and Minimum Digit
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char n[100];
+    int max=0, min=1000;
+    scanf("%s", n);
+    for(int i = 0; i<= strlen(n); i++)
+    {
+        if(n[i]>='0' && n[i]<='9')
+        {
+            int digit=n[i]-'0';
+            if(digit>max)
+                max=digit;
+            if(digit<min)
+                min=digit;
+        }
+    }
+    printf("%d %d", max, min);
+    return 0;
+}
+
+//8.  Reverse a Number(CodeChef)
+#include <stdio.h>
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	int rev=0;
+	while(n>0)
+	{
+	    int r=n%10;
+	    rev *= 10+r;
+	    n /= 10;
+	}
+	printf("%d", rev);
+	return 0;
+}
+
+//9.  Palindrome Number 119(LeetCode)
+bool isPalindrome(int x) {
+    
+    int original_number = x;
+    long long reversed_number =0;
+    if(x<0){
+        return false;
+    }while(x!= 0){
+        int remainder = x%10;
+        reversed_number = reversed_number * 10 + remainder;
+        x/=10;
+    }return original_number == reversed_number;
+}
+
+//10.  Is it an Armstrong Number? 2
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,temp1,temp2;
+    int count=0;
+    int digit,total=0;
+    scanf("%d",&n);
+    temp1=n;
+        
+    temp2=n;
+    while(temp2!=0)
+    {
+        count++;
+        temp2=temp2/10;
+    }    
+    temp2=n;
+    while(temp2>0)
+    {
+        digit=temp2%10;
+        total=total+pow(digit,count);
+        temp2=temp2/10;
+    }
+    if(total==temp1)
+        printf("true");
+    else
+        printf("false");
+    
+    return 0;
+}
