@@ -1,8 +1,9 @@
 DAY 2
+
 1.USING ARITHMETIC OPERATOR TO SWAPPING TWO NUMBERS WITHOUT USING THIRD VARIABLE
+
 METHOD.1 
 // C Code to swap two numbers using arithmetic operators
-
 #include <stdio.h>
 int main() {
     int a = 2, b = 3;
@@ -15,6 +16,7 @@ int main() {
     printf("a = %d b = %d\n", a, b);
     return 0;
 }
+
 METHOD.2
  // C Code to swap two numbers using bitwise XOR
 
@@ -30,6 +32,7 @@ int main() {
     printf("a = %d b = %d\n", a, b);
     return 0;
 }
+
 METHOD.3
 //C Code to swap two numbers using multiply and division
 #include <stdio.h>
@@ -44,6 +47,7 @@ int main() {
     printf("a = %d, b = %d", a, b);
     return 0;
 }
+
 2.//TO CHECK ODD OR EVEN WITHOUT USING ARITHMETIC OPERATIONS:
 #include <stdio.h>
 
@@ -58,6 +62,7 @@ int main() {
 
     return 0;
 }
+
 //COUNT ALL THE FACTORS
 //Without using square root in time complexity
 //Only for sqrt
@@ -83,6 +88,7 @@ int main()
     printf("%d", count);
     return 0;
 }
+
 //Using squareroot in time complexity
 //Only for non sqrt
 #include<math.h>
@@ -101,6 +107,7 @@ int main()
     printf("%d", count);
     return 0;
 }
+
 //Normal way
 #include<stdio.h>
 int main()
@@ -117,6 +124,7 @@ int main()
     printf("%d", count);
     return 0;
 }
+
 //Normal way a number is prime or not
 //METHOD 1
 #include<stdio.h>
@@ -142,6 +150,7 @@ int main()
 
     return 0;
 }
+
 //METHOD 2
 #include<stdio.h>
 int main()
@@ -165,6 +174,7 @@ int main()
     }
     return 0;
 }
+
 //METHOD 3 EFFICIENT PROGRAM
 #include<stdio.h>
 int main()
